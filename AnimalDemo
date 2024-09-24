@@ -1,16 +1,16 @@
-
+// Illustration of Classes and Objects
 class Animal {
     // Attributes (Encapsulation)
     private String name;
     private int age;
 
-   
+    // Constructor
     public Animal(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    
+    // Methods (Abstraction)
     public void makeSound() {
         System.out.println("Generic animal sound");
     }
@@ -24,13 +24,13 @@ class Animal {
     }
 }
 
-
+// Inheritance and Polymorphism
 class Dog extends Animal {
     public Dog(String name, int age) {
         super(name, age); 
     }
 
-    
+    // Method Overriding (Polymorphism)
     @Override
     public void makeSound() {
         System.out.println("Woof!");
@@ -42,7 +42,7 @@ class Cat extends Animal {
         super(name, age); 
     }
 
-   
+    // Method Overriding (Polymorphism)
     @Override
     public void makeSound() {
         System.out.println("Meow!");
@@ -55,10 +55,11 @@ public class AnimalDemo {
         Dog dog = new Dog("Buddy", 3);
         Cat cat = new Cat("Whiskers", 2);
 
-      
+        animal.makeSound(); // Output: Generic animal sound
+        dog.makeSound();     // Output: Woof!
+        cat.makeSound();     // Output: Meow!
+
         System.out.println(dog.getName() + " is " + dog.getAge() + " years old."); 
-       
+        // Output: Buddy is 3 years old.
     }
 }
-
-
